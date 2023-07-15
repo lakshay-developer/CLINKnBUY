@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories</title>
+    <link rel="icon" href="fav1.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .full_container {
+            width: 100%;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-column-gap: 2.2%;
+            grid-row-gap: 2.2%;
+            padding: 4%;
+            padding-top: 0%;
+
+        }
+
+        .main {
+            width: 100%;
+            height: 80px;
+            /* border: 2px solid white; */
+            display: inline-flex;
+            background-color: rgb(21, 45, 141);
+            display: inline-flex;
+        }
+
+        .submain {
+            width: 100%;
+            padding: 2% 0%;
+            height: 2%;
+            color: rgb(152, 48, 48);
+        }
+
+        .submain h1 {
+            font-size: 3vw;
+        }
+
+        .div {
+            background-color: blanchedalmond;
+            border: 2px solid black;
+            padding: 5%;
+            height: 400px;
+            position: relative;
+        }
+
+        .div img {
+            width: 100%;
+            height: 300px;
+            margin: auto;
+        }
+
+        .div .info {
+            position: absolute;
+            width: 6%;
+            height: 4%;
+            top: 7%;
+            background-color: darkgrey;
+            right: 10%;
+            border-radius: 50%;
+            color: white;
+        }
+
+        .details {
+            position: absolute;
+            width: 1300%;
+            height: 1500%;
+            top: -16%;
+            background-color: whitesmoke;
+            right: -40%;
+            color: black;
+            display: none;
+            /* border: 2px solid black; */
+            padding: 45%;
+        }
+
+        .info:hover .details {
+            opacity: 0.7;
+            display: block;
+        }
+
+        .div p {
+            color: black;
+            font-size: 1.6vw;
+            text-decoration: capitalize;
+        }
+
+        .div button {
+            display: block;
+            width: 100%;
+            height: 30px;
+            font-size: 1.2vw;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .sign_in {
+            /* width: 20%; */
+            margin: auto;
+            margin-top: 25px;
+        }
+
+        .sign_in button {
+            padding: 5px 15px;
+            border-radius: 7%;
+            border: none;
+            cursor: pointer;
+            /* width: 50%; */
+            height: 35px;
+            font-size: 1.5vw;
+            margin: auto;
+        }
+
+        .logo {
+            width: 79%;
+            display: inline-flex;
+            padding: 0px 50px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 65px;
+            margin-left: 10px;
+            display: inline;
+            margin-top: 12px;
+        }
+
+        .logo_name {
+            mix-blend-mode: multiply;
+
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 45px;
+            background-color: rgb(21, 45, 141);
+        }
+
+        .footer-content p {
+            margin: 0;
+            color: rgb(102, 90, 90);
+        }
+
+        .footer-content p {
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="full_container">
+        <div class="nav">
+            <div class="main">
+                <div class="logo">
+                    <div class="logo_img">
+                        <img src="one.png" alt="logo">
+                    </div>
+                    <div class="logo_name">
+                        <img src="logo2.png" alt="logo">
+                    </div>
+                </div>
+                <div class="sign_in">
+                    <button><a href="login.php">Sign in</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="submain">
+            <h1>
+                <center>Mobiles</center>
+            </h1>
+        </div>
+        <div class="container">
+            <div class="div">
+                <img src="imagestoys/y15.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                      <p>18,999/-</p>  Brand	Vivo <br>
+Model Name	Y15 <br>
+Operating System	Android 9.0 <br>
+Cellular Technology	4G <br>
+Memory Storage Capacity	64 GB <br>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>vivo y15</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/x3.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details"><p>Rs-22500/-</p>Brand	Samsung <br>
+                        Model Name	Samsung Galaxy x3 <br>
+                        Network Service Provider	Unlocked for All Carriers <br>
+                        Operating System	Android 13.0 <br>
+                        Cellular Technology	5G <br> </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>samsung x3</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/vivox60.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details"><p>Rs-18400/-/-</p>Brand	Vivo <br>
+                        Model Name	Vivo X60 (Midnight Black, 8GB RAM, 128GB ROM) <br>
+                        Network Service Provider	Unlocked for All Carriers <br>
+                        Operating System	Android 11.1 based Funtouch OS 11.1 <br>
+                        Connectivity Technology	USB <br></div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>vivo x60</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/vivov21.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details"><p>Rs-18500/-</p>Brand	Vivo <br>
+                        Model Name	Vivo V21 (Sunset Dazzle, 8GB RAM, 128GB ROM) <br>
+                        Network Service Provider	Unlocked for All Carriers <br>
+                        Operating System	Funtouch OS 11.1 (Based on Android 11) <br>
+                        Cellular Technology	5G <br></div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>vivo v21</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/vivov20pro.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details"><p>17500/-</p>
+                        Brand	Vivo <br>
+Model Name	Vivo V20 Pro <br>
+Network Service Provider	Unlocked for All Carriers <br>
+Operating System	Android 11.0 <br>
+Cellular Technology	5G, 4G <br>
+                        </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>vivo v20 pro</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/redmi.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details"><p>Rs-9400/-</p>Brand	Redmi <br>
+                        Model Name	Redmi 9 Activ <br>
+                        Network Service Provider	Unlocked for All Carriers <br>
+                        Operating System	Android MIUI 20, MIUI 20 <br>
+                        Cellular Technology	LTE <br></div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>redmi 9</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/realmeq2.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details"><p>Rs-8400/-</p>Brand	Realme <br>
+                        Model Name	Realme q2 <br>
+                        Network Service Provider	Unlocked for All Carriers <br>
+                        Operating System	Android 11.0 <br>
+                        Cellular Technology	4G <br></div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>raelme q2</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/realme narzo.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details"><p>Rs-14200/-</p>Brand	Realme <br>
+                        Model Name	Narzo 50 <br>
+                        Network Service Provider	Unlocked for All Carriers <br>
+                        Operating System	Android 11.0 <br>
+                        Cellular Technology	LTE <br></div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>realme narzo</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/oppo5g.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details"><P>Rs.24000/-</P>Oppo  5G (Glowing , 8GB RAM, 128 Storage) <br>| 5000 mAh Battery with 33W SUPERVOOC Charger <br>| 50MP AI Camera | 90Hz Refresh Rate <br>
+                        </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>oppo 5g launched</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/oneplus8t.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details"><p>Rs-20000/-</p>OnePlus 8T 5G <br> (Aquamarine Green, 12GB RAM, 256GB Storage) <br>
+                        </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>oneplus 8t</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/m51.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details"><P> Rs-25000/-</P>Samsung Galaxy M51 5G <br>
+                        (Deep Ocean Blue, 8GB, 128GB Storage)  <br>
+                        | 108MP | sAmoled+ 120Hz <br>
+                         | 16GB RAM with RAM Plus | Without Charger <br>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>samsung m51s</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/m31.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details"><p>Rs.1800/-</p>Samsung Galaxy M32 (Black, 6GB RAM, 128GB <br> | FHD+ sAMOLED 90Hz Display  <br>| 6000mAh Battery | 64MP Quad Camera <br></div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>samsung m31</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+        </div>
+        <div class="footer-content">
+            <p>&copy; 2023 Your Website. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>

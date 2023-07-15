@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toys</title>
+    <link rel="icon" href="fav1.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .full_container {
+            width: 100%;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-column-gap: 2.2%;
+            grid-row-gap: 2.2%;
+            padding: 4%;
+            padding-top: 0%;
+            position: relative;
+        }
+
+        .main {
+            width: 100%;
+            height: 80px;
+            /* border: 2px solid white; */
+            display: inline-flex;
+            background-color: rgb(21, 45, 141);
+            display: inline-flex;
+        }
+
+        .back_forward {
+            display: inline-flex;
+            width: 10%;
+        }
+
+        .back button {
+            width: 40px;
+            height: 40px;
+            border-radius: 10%;
+            margin: 55%;
+            font-size: 1.2vw;
+            background-color: inherit;
+            border: none;
+        }
+
+        .forward button {
+            width: 40px;
+            height: 40px;
+            border-radius: 10%;
+            margin: 55%;
+            font-size: 1.2vw;
+            background-color: inherit;
+            border: none;
+        }
+
+        .submain {
+            width: 100%;
+            padding: 2% 0%;
+            height: 2%;
+            color: rgb(152, 48, 48);
+        }
+
+        .submain h1 {
+            font-size: 3vw;
+        }
+
+        .div {
+            background-color: blanchedalmond;
+            border: 2px solid black;
+            padding: 5%;
+            height: 400px;
+            position: relative;
+        }
+
+        .div img {
+            width: 100%;
+            height: 300px;
+            margin: auto;
+        }
+
+        .div .info {
+            position: absolute;
+            width: 6%;
+            height: 4%;
+            top: 7%;
+            background-color: darkgrey;
+            right: 10%;
+            border-radius: 50%;
+            color: white;
+        }
+
+        .details {
+            position: absolute;
+            width: 1300%;
+            height: 1500%;
+            top: -16%;
+            background-color: whitesmoke;
+            right: -40%;
+            color: black;
+            display: none;
+            /* border: 2px solid black; */
+            padding: 45%;
+        }
+
+        .info:hover .details {
+            opacity: 0.7;
+            display: block;
+        }
+
+        .div p {
+            color: black;
+            font-size: 1.8vw;
+            text-decoration: capitalize;
+        }
+
+        .div button {
+            display: block;
+            width: 100%;
+            height: 30px;
+            font-size: 1.2vw;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .sign_in {
+            /* width: 20%; */
+            margin: auto;
+            margin-top: 25px;
+        }
+
+        .search {
+            width: 45%;
+            position: relative;
+            text-align: center;
+            margin: auto;
+            margin-left: 6%;
+            display: inline-flex;
+        }
+
+        #search_bar {
+            width: 70%;
+            padding: 5px 10px;
+        }
+
+        .search button {
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 0px 10px 10px 0px;
+            border: none;
+        }
+
+        .sign_in button {
+            padding: 5px 15px;
+            border-radius: 7%;
+            border: none;
+            cursor: pointer;
+            /* width: 50%; */
+            height: 35px;
+            font-size: 1.5vw;
+            margin: auto;
+        }
+
+        .logo {
+            width: 81%;
+            display: inline-flex;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 65px;
+            margin-left: 10px;
+            display: inline;
+            margin-top: 12px;
+        }
+
+        .logo_name {
+            mix-blend-mode: multiply;
+
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 45px;
+            background-color: rgb(21, 45, 141);
+        }
+
+        .footer-content p {
+            margin: 0;
+            color: white;
+        }
+
+        .p1 {
+            width: 70%;
+        }
+
+        .p2 a {
+            width: 10%;
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-content p {
+            margin: auto;
+        }
+
+        .scroll_up {
+            position: absolute;
+            bottom: 1%;
+            right: 1%;
+            border-radius: 50%;
+            background-color: inherit;
+            border: none;
+        }
+
+        button img {
+            width: 30px;
+            height: 30px;
+            /* mix-blend-mode: multiply; */
+            /* border: none; */
+        }
+
+        .search #start-btn img {
+            border-radius: 50px;
+            height: 25px;
+            width: 100%;
+            margin: 2px 2px -2px 0px;
+            display: inline;
+        }
+
+        .search #start-btn {
+            padding: 0;
+            border: none;
+            border-radius: 10px 0px 0px 10px;
+        }
+
+        #output {
+            height: 200%;
+            width: 71%;
+            /* border: 2px solid black; */
+            padding: 10px;
+            position: absolute;
+            display: none;
+            top: 100%;
+            left: 4%;
+            z-index: 1;
+            background-color: whitesmoke;
+            color: black;
+        }
+
+        .search:hover #output {
+            display: block;
+        }
+
+        /*
+        .co{
+            display: inline-flex;
+        } */
+
+        @media (max-width:1000px) {
+            * {
+                font-size: 20px;
+            }
+
+            .div p {
+                color: black;
+                font-size: 2.75vw;
+            }
+
+            .container {
+                grid-template-columns: auto auto auto;
+                grid-row-gap: 0.5%;
+                height: 1720px;
+            }
+
+            .back_forward {
+                display: inline-flex;
+                width: 20%;
+            }
+
+            .sign_in {
+                width: 15%;
+            }
+
+            .logo {
+                width: 49%;
+                display: inline-flex;
+                padding: 0px 10%;
+            }
+        }
+
+        @media (max-width:700px) {
+            * {
+                font-size: 20px;
+            }
+
+            .div p {
+                font-size: 3.5vw;
+            }
+
+            .back_forward {
+                display: inline-flex;
+                width: 25%;
+            }
+
+            .container {
+                grid-template-columns: auto auto;
+                grid-row-gap: 0.3%;
+                height: 2700px;
+            }
+
+            .sign_in {
+                width: 20%;
+            }
+
+            .logo {
+                margin: aut0;
+                padding: 0px 20px;
+            }
+        }
+
+        @media (max-width:400px) {
+            * {
+                font-size: 20px;
+            }
+
+            .main {
+                height: 60px;
+            }
+
+            .div p {
+                font-size: 25px;
+            }
+
+            .back button {
+                width: 40px;
+                height: 40px;
+                margin: 25%;
+            }
+
+            .forward button {
+                width: 40px;
+                height: 40px;
+                margin: 25%;
+            }
+
+            .logo img {
+                height: 45px;
+                margin-top: 9px;
+            }
+
+            .sign_in button {
+                padding: 2px 2px;
+                height: 25px;
+            }
+
+            .container {
+                grid-template-columns: auto;
+                grid-row-gap: 0.3%;
+                height: 5600px;
+            }
+
+            .sign_in {
+                width: 23%;
+            }
+
+            .sign_in button {
+                margin-top: -5%;
+            }
+
+            .logo {
+                width: 69%;
+                margin: aut0;
+                padding: 0px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="full_container">
+        <div class="nav">
+            <div class="main">
+                <div class="back_forward">
+                    <div class="back" onclick="window.history.back()"><button><img src="left.png.jpg"
+                                style="mix-blend-mode: multiply; background-color: inherit;" alt=""></button>
+                    </div>
+                    <div class="forward" onclick="window.history.forward()"><button><img src="right.png.jpg"
+                                style="mix-blend-mode: multiply; background-color: inherit;" alt=""></button></div>
+                </div>
+                <div class="logo">
+                    <div class="logo_img">
+                        <img src="one.png" alt="logo">
+                    </div>
+                    <div class="logo_name">
+                        <img src="logo2.png" alt="logo">
+                    </div>
+                    <div class="search">
+                        <button id="start-btn"><img src="mic.png" alt=""></button>
+                        <div id="output"></div>
+                        <input type="text" name="search" id="search_bar"
+                            placeholder="Search for your things like phone,laptopp,novel....etc" />
+                        <button onclick="search()">Search</button>
+                    </div>
+                </div>
+                <div class="sign_in">
+                    <button><a href="login.php">Login</a></button>
+                </div>
+            </div>
+            <script>
+                const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+                const recognition = new SpeechRecognition();
+                recognition.continuous = true;
+
+                const outputDiv = document.getElementById('output');
+                const startBtn = document.getElementById('start-btn');
+
+                startBtn.addEventListener('click', () => {
+                    startBtn.disabled = true;
+                    recognition.start();
+                });
+
+                recognition.onresult = (event) => {
+                    const transcript = event.results[event.results.length - 1][0].transcript.toLowerCase();
+                    outputDiv.innerHTML += `<p>${transcript}</p>`;
+                    handleRedirect(transcript);
+                };
+
+                recognition.onend = () => {
+                    startBtn.disabled = false;
+                };
+
+                function handleRedirect(transcript) {
+                    if (transcript.includes('google')) {
+                        window.location.href = 'https://www.youtube.com/results?search_query=speech+to+text+js';
+                    } else if (transcript.includes('about')) {
+                        window.location.href = 'sign.txt';
+                    } else if (transcript.includes('contact')) {
+                        window.location.href = 'contact.html';
+                    }
+                }
+
+            </script>
+        </div>
+        <div class="submain">
+            <h1>
+                <center>Laptops</center>
+            </h1>
+        </div>
+        <div class="container">
+            <div class="div">
+                <img src="hp15s.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">Name : Hp 15s. <br>
+                        RAM : 8gb <br>
+                        Storage : 512gb <br>
+                        Processor : i5
+                        <br>
+                        Generation : 12th <br>
+                        Price : 60,000/-
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Hp 15s</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="lenovo.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">Name : lenovo thinkbook. <br>
+                        RAM : 8gb <br>
+                        Storage : 512gb <br>
+                        Processor : i5
+                        <br>
+                        Generation : 12th <br>
+                        Price : 53,000/-
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>lenovo thinkbook</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="pavalion.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">Name : Hp pavalion. <br>
+                        RAM : 16gb <br>
+                        Storage : 512gb <br>
+                        Processor : i5
+                        <br>
+                        Generation : 12th <br>
+                        Price : 66,000/-
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Hp pavalion</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+
+            <div class="div">
+                <img src="envy15.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">Name : Hp Envy 15. <br>
+                        RAM : 16gb <br>
+                        Storage : 512gb <br>
+                        Processor : Ryzen 5
+                        <br>
+                        Generation : 5000 series <br>
+                        Price : 1,14,000/-
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Hp Envy 15</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="gaming.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">Name : Asus rog gaming. <br>
+                        RAM : 16gb <br>
+                        Storage : 512gb <br>
+                        Processor : Ryzen 7H
+                        <br>
+                        Generation : 6800<br>
+                        Price : 1,00,000/-
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Asus rog gaming</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="inspiron.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">Name : Dell inspiron. <br>
+                        RAM : 8gb <br>
+                        Storage : 512gb <br>
+                        Processor : i5
+                        <br>
+                        Generation : 12th<br>
+                        Price : 59,000/-
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Dell inspiron</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="aspire.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">Name : Acer aspire. <br>
+                        RAM : 8gb <br>
+                        Storage : 256gb <br>
+                        Processor : i3
+                        <br>
+                        Generation : 13th<br>
+                        Price : 43,000/-
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Acer aspire</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="acerleptop.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">Name : Acer 15 <br>
+                        RAM : 8gb <br>
+                        Storage : 512gb <br>
+                        Processor : i5
+                        <br>
+                        Generation : 11th<br>
+                        Price : 51,000/-
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Acer 15</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="athinkpad.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">Name : lenovo thinkpad. <br>
+                        RAM : 8gb <br>
+                        Storage : 512gb <br>
+                        Processor : i3
+                        <br>
+                        Generation : 12th<br>
+                        Price : 48,000/-
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>lenovo thinkpad</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="alenovo14.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">Name : Lenovo 14. <br>
+                        RAM : 8gb <br>
+                        Storage : 1Tb <br>
+                        Processor : i5
+                        <br>
+                        Generation : 10th<br>
+                        Price : 66,000/-
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Lenovo 14</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="a15.6.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">Name : lenovo 15.6. <br>
+                        RAM : 8gb <br>
+                        Storage : 512gb <br>
+                        Processor : i3
+                        <br>
+                        Generation : 11th<br>
+                        Price : 35,000/-
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>lenovo 15.6</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="acer aspire1.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">Name : Acer aspire1. <br>
+                        RAM : 4gb <br>
+                        Storage : 256gb <br>
+                        Processor : i3
+                        <br>
+                        Generation : 11th<br>
+                        Price : 40,000/-
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Acer aspire1</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="scroll_up" onclick="scroll_up()"><button style="background-color: inherit; border: none;">
+                    <img src="up.png" style="mix-blend-mode: multiply; background-color: inherit;" alt="">
+                </button></div>
+        </div>
+
+        <div class="footer-content">
+            <p class="p1">&copy; 2023 Your Website. All rights reserved.</p>
+            <p class="p2"><a href="lakshay.php">HOME</a></p>
+        </div>
+    </div>
+</body>
+<script>
+    function scroll_up() {
+        window.scrollTo(0, 0);
+    }
+    function search() {
+        var value = document.getElementById("search_bar").value;
+        if (value === "" || value === "search") {
+            alert("Search again.");
+        } else if (value === "accessories" || value === "Accessories") {
+            window.location.href = "accessories.html";
+        } else if (value === "course books" || value === "Course books") {
+            window.location.href = "Course Bookks.html";
+        } else if (value === "Foodgrains" || value === "foodgrains") {
+            window.location.href = "Foodgrains.html";
+        } else if (value === "Household" || value === "household") {
+            window.location.href = "Household.html";
+        } else if (value === "Hygiene" || value === "hygiene") {
+            window.location.href = "Hygiene.html";
+        } else if (value === "kids cloths" || value === "Kids cloths") {
+            window.location.href = "kidscloths.html";
+        } else if (value === "laptop" || value === "Laptop") {
+            window.location.href = "laptop.html";
+        } else if (value === "Mens cloths" || value === "mens cloths") {
+            window.location.href = "menscloths.html";
+        } else if (value === "Novel" || value === "novel") {
+            window.location.href = "Novel.html";
+        } else if (value === "phone" || value === "Phone" || value === "mobile" || value === "Mobile") {
+            window.location.href = "phone.html";
+        } else if (value === "Story Book" || value === "story Book") {
+            window.location.href = "Story Books.html";
+        } else if (value === "Women cloths" || value === "women cloths") {
+            window.location.href = "womencloths.html";
+        } else {
+            alert("Product not found ? ")
+        }
+    }
+</script>
+
+</html>

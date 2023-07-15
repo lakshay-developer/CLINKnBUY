@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories</title>
+    <link rel="icon" href="fav1.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+html{
+    scroll-behavior: smooth;
+}
+        .full_container {
+            width: 100%;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-column-gap: 2.2%;
+            grid-row-gap: 2.2%;
+            padding: 4%;
+            padding-top: 0%;
+            position: relative;
+        }
+
+        .main {
+            width: 100%;
+            height: 80px;
+            /* border: 2px solid white; */
+            display: inline-flex;
+            background-color: rgb(21, 45, 141);
+            display: inline-flex;
+        }
+
+        .back_forward {
+            display: inline-flex;
+            width: 10%;
+        }
+
+        .back button {
+            width: 40px;
+            height: 40px;
+            border-radius: 10%;
+            margin: 55%;
+            font-size: 1.2vw;
+            background-color: inherit;
+            border: none;
+        }
+
+        .forward button {
+            width: 40px;
+            height: 40px;
+            border-radius: 10%;
+            margin: 55%;
+            font-size: 1.2vw;
+            background-color: inherit;
+            border: none;
+        }
+
+        .submain {
+            width: 100%;
+            padding: 2% 0%;
+            height: 2%;
+            color: rgb(152, 48, 48);
+        }
+
+        .submain h1 {
+            font-size: 3vw;
+        }
+
+        .div {
+            background-color: blanchedalmond;
+            border: 2px solid black;
+            padding: 5%;
+            height: 400px;
+            position: relative;
+        }
+
+        .div img {
+            width: 100%;
+            height: 300px;
+            margin: auto;
+        }
+
+        .div .info {
+            position: absolute;
+            width: 6%;
+            height: 4%;
+            top: 7%;
+            background-color: darkgrey;
+            right: 10%;
+            border-radius: 50%;
+            color: white;
+        }
+
+        .details {
+            position: absolute;
+            width: 1300%;
+            height: 1500%;
+            top: -16%;
+            background-color: whitesmoke;
+            right: -40%;
+            color: black;
+            display: none;
+            /* border: 2px solid black; */
+            padding: 45%;
+        }
+
+        .info:hover .details {
+            opacity: 0.7;
+            display: block;
+        }
+
+        .div p {
+            color: black;
+            font-size: 1.8vw;
+            text-decoration: capitalize;
+        }
+
+        .div button {
+            display: block;
+            width: 100%;
+            height: 30px;
+            font-size: 1.2vw;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .sign_in {
+            /* width: 20%; */
+            margin: auto;
+            margin-top: 25px;
+        }
+        .search {
+            width: 45%;
+            position: relative;
+            text-align: center;
+            margin: auto;
+            margin-left: 6%;
+            display: inline-flex;
+        }
+
+        #search_bar {
+            width: 70%;
+            padding: 5px 10px;
+        }
+
+        .search button {
+            padding: 5px 10px;
+            cursor: pointer;
+    border-radius:  0px 10px 10px 0px;
+    border: none;
+        }
+
+        .sign_in button {
+            padding: 5px 15px;
+            border-radius: 7%;
+            border: none;
+            cursor: pointer;
+            /* width: 50%; */
+            height: 35px;
+            font-size: 1.5vw;
+            margin: auto;
+        }
+
+        .logo {
+            width: 81%;
+            display: inline-flex;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 65px;
+            margin-left: 10px;
+            display: inline;
+            margin-top: 12px;
+        }
+
+        .logo_name {
+            mix-blend-mode: multiply;
+
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 45px;
+            background-color: rgb(21, 45, 141);
+        }
+
+        .footer-content p {
+            margin: 0;
+            color: white;
+        }
+        .p1{
+width: 70%;
+        }
+        .p2 a{
+            width: 10%;
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-content p {
+            margin: auto;
+        }
+
+        .scroll_up {
+            position: absolute;
+            bottom: 1%;
+            right: 1%;
+            border-radius: 50%;
+            background-color: inherit;
+            border: none;
+        }
+
+        button img {
+            width: 30px;
+            height: 30px;
+            /* mix-blend-mode: multiply; */
+            /* border: none; */
+        }
+        .search #start-btn img{
+            border-radius: 50px;
+    height: 25px;
+    width: 100%;
+    margin: 2px 2px -2px 0px;
+    display: inline;
+        }
+        .search #start-btn{
+            padding: 0;
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+        }
+        #output {
+            height: 200%;
+    width: 71%;
+    /* border: 2px solid black; */
+    padding: 10px;
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 4%;
+    z-index: 1;
+    background-color: whitesmoke;
+    color: black;
+}
+.search:hover #output{
+    display: block;
+}
+        /*
+        .co{
+            display: inline-flex;
+        } */
+
+        @media (max-width:1000px) {
+            * {
+                font-size: 20px;
+            }
+
+            .div p {
+                color: black;
+                font-size: 2.75vw;
+            }
+
+            .container {
+                grid-template-columns: auto auto auto;
+                grid-row-gap: 0.5%;
+                height: 1720px;
+            }
+
+            .back_forward {
+                display: inline-flex;
+                width: 20%;
+            }
+
+            .sign_in {
+                width: 15%;
+            }
+
+            .logo {
+                width: 49%;
+                display: inline-flex;
+                padding: 0px 10%;
+            }
+        }
+
+        @media (max-width:700px) {
+            * {
+                font-size: 20px;
+            }
+
+            .div p {
+                font-size: 3.5vw;
+            }
+
+            .back_forward {
+                display: inline-flex;
+                width: 25%;
+            }
+
+            .container {
+                grid-template-columns: auto auto;
+                grid-row-gap: 0.3%;
+                height: 2700px;
+            }
+
+            .sign_in {
+                width: 20%;
+            }
+
+            .logo {
+                margin: aut0;
+                padding: 0px 20px;
+            }
+        }
+
+        @media (max-width:400px) {
+            * {
+                font-size: 20px;
+            }
+
+            .main {
+                height: 60px;
+            }
+
+            .div p {
+                font-size: 25px;
+            }
+
+            .back button {
+                width: 40px;
+                height: 40px;
+                margin: 25%;
+            }
+
+            .forward button {
+                width: 40px;
+                height: 40px;
+                margin: 25%;
+            }
+
+            .logo img {
+                height: 45px;
+                margin-top: 9px;
+            }
+
+            .sign_in button {
+                padding: 2px 2px;
+                height: 25px;
+            }
+
+            .container {
+                grid-template-columns: auto;
+                grid-row-gap: 0.3%;
+                height: 5600px;
+            }
+
+            .sign_in {
+                width: 23%;
+            }
+
+            .sign_in button {
+                margin-top: -5%;
+            }
+
+            .logo {
+                width: 69%;
+                margin: aut0;
+                padding: 0px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="full_container">
+        <div class="nav">
+            <div class="main">
+                <div class="back_forward">
+                    <div class="back" onclick="window.history.back()"><button><img src="left.png.jpg" style="mix-blend-mode: multiply; background-color: inherit;" alt=""></button>
+                    </div>
+                    <div class="forward" onclick="window.history.forward()"><button><img src="right.png.jpg" style="mix-blend-mode: multiply; background-color: inherit;" alt=""></button></div>
+                </div>
+                <div class="logo">
+                    <div class="logo_img">
+                        <img src="one.png" alt="logo">
+                    </div>
+                    <div class="logo_name">
+                        <img src="logo2.png" alt="logo">
+                    </div>
+                    <div class="search">
+                        <button id="start-btn"><img src="mic.png" alt=""></button>
+                        <div id="output"></div>
+                        <input type="text" name="search" id="search_bar" placeholder="Search for your things like phone,laptopp,novel....etc" />
+                        <button onclick="search()">Search</button>
+                    </div>
+            </div>
+                <div class="sign_in">
+                    <button><a href="login.php">Login</a></button>
+                </div>
+            </div>
+            <script>
+                const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            const recognition = new SpeechRecognition();
+            recognition.continuous = true;
+            
+            const outputDiv = document.getElementById('output');
+            const startBtn = document.getElementById('start-btn');
+            
+            startBtn.addEventListener('click', () => {
+              startBtn.disabled = true;
+              recognition.start();
+            });
+            
+            recognition.onresult = (event) => {
+              const transcript = event.results[event.results.length - 1][0].transcript.toLowerCase();
+              outputDiv.innerHTML += `<p>${transcript}</p>`;
+              handleRedirect(transcript);
+            };
+            
+            recognition.onend = () => {
+              startBtn.disabled = false;
+            };
+            
+            function handleRedirect(transcript) {
+              if (transcript.includes('google')) {
+                window.location.href = 'https://www.youtube.com/results?search_query=speech+to+text+js';
+              } else if (transcript.includes('about')) {
+                window.location.href = 'sign.txt';
+              } else if (transcript.includes('contact')) {
+                window.location.href = 'contact.html';
+              }
+            }
+            
+              </script>
+        </div>
+        <div class="submain">
+            <h1>
+                <center>Accessories</center>
+            </h1>
+        </div>
+        <div class="container">
+            <div class="div">
+                <img src="accessories1.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <p>Rs-2000/-</p>Bluetooth 5.0 <br>
+                        1.55 inches Touch Display <br>
+                        Water Resistant, 50 m br
+                        Scratch Resistant <br>
+                        Heart Rate Monitor <br>
+                        SpO2 (Blood Oxygen) Monitor <br>
+                        Pedometer, Sleep Monitor, Calorie Count, Step Count <br>
+                        10 days Battery
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Noise smartwatch</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="accessories2.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <p>Rs-2250/-</p>BoAt ProGear B20 Fitness Band <br> 14 Sports Mode and 10-Days Battery Life
+                        Launched
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Boat band</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="accessories3.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <p>Rs-2000/-</p>fire-Boltt Touch Large Display Smart Watch <br> with in-Built Games,<br> 8 Days
+                        Battery Life,<br> IP67 Water Resistant <br> with Blood Oxygen and Heart Rate Monitoring (Grey)
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Firevolt watch</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="accessories4.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <p>Rs-3500/-</p>boAt Nirvana 751 ANC Hybrid Noise Cancelling Bluetooth Wireless <br> Over Ear
+                        Headphones with Up to 65H Playtime,<br> ASAP Charge,<br> Ambient Sound Mode,<br> Immersive
+                        Sound,<br> Carry Pouch(Gunmetal Grey)
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Boat Headphone</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="accessories5.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <p>1750/-</p>Dual Equaliser Modes for Normal <br>
+                        Wireless Bluetooth Streaming ; Frequency Range: 20Hz~20kHz ;<br> Talk time (Hours): Up to 13hrs
+                        Bluetooth: 5.0V ; <br> Charging Type: 5V 1A wire charging ; <br> Battery Capacity: 200mAh
+                        20 hours Music Playtime <br>
+                        Quick Charging: 10 min of Charge gives you 2 Hrs playtime <br>
+                        Lightweight and Flat Foldable Design, Bixby - No <br>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Noise Headphone</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="accessories6.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <p>Rs-3400/-</p>Brand: boAt <br>
+                        Generic Name: Bluetooth Headset <br>
+                        Product: New <br>
+                        Model: 440 <br>
+                        Colour: White <br>
+                        Playback Time: 8 Hour <br>
+                        Connectivity: Bluetooth 5.0 <br>
+                        Warranty: 1 Year From boAt <br>
+                        Volumetric Weight: 0.80 kg
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Boat headphone</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="accessories7.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <p>Rs-4400/-</p>Brand: JBL <br>
+                        Product: New <br>
+                        Generic Name: in-ear neckband headphone <br>
+                        Model no.: LIVE 200BT <br>
+                        Warranty: 1 Year From JBL <br>
+                        Volumetric Weight: 0.50 kg
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>JBL Neckband</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="accessories8.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <p>Rs-4200/-</p>Brand: boAt <br>
+                        Product: New <br>
+                        Generic Name: Bluetooth Headset, Neon <br>
+                        Model no.: Rockerz 255 <br>
+                        Warranty: 1 Year From Boat <br>
+                        Volumetric Weight: 0.20 kg
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Boat neckband</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="accessories9.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <P>Rs.2400/-</P>Brand: boAt <br>
+                        Product: New <br>
+                        Generic Name: Bluetooth Headset, Raging Red <br>
+                        Model no.: 255 <br>
+                        Warranty: 1 Year From boAt <br>
+                        Volumetric Weight: 0.20 kg
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Rockerz Neckband</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="accessories10.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <p>Rs-1500/-</p>Brand: boAt <br>
+                        Product: New <br>
+                        Generic Name: Bluetooth Headset, Neon <br>
+                        Model no.: Rockerz 255 <br>
+                        Warranty: 1 Year From Boat <br>
+                        Volumetric Weight: 0.20 kg
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Boat 255pro</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="accessories11.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <P> Rs-600/-</P>Brand: SanDisk <br>
+                        Capacity: 32GB <br>
+                        Product: New <br>
+                        Model: iXpand 32GB Flash Drive <br>
+                        Warranty: 2-year limited warranty <br>
+                        Connectivity: USB connectors <br>
+                        Volumetric Weight: 0.15 kg
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Sandisk 32gb</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="accessories12.jpg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <p>Rs.800/-</p>Brand: HP <br>
+                        Product: New <br>
+                        Generic Name: 32GB Pen Drive <br>
+                        Model no.: V232W <br>
+                        Warranty: 2 Year Hp india <br>
+                        Volumetric Weight: 0.15 kg
+                    </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Hp 32gb</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="scroll_up" onclick="scroll_up()"><button style="background-color: inherit; border: none;">
+                    <img src="up.png" style="mix-blend-mode: multiply; background-color: inherit;" alt="">
+                </button></div>
+        </div>
+
+        <div class="footer-content">
+            <p class="p1">&copy; 2023 Your Website. All rights reserved.</p>
+            <p class="p2"><a href="lakshay.php">HOME</a></p>
+        </div>
+    </div>
+</body>
+<script>
+    function scroll_up() {
+        window.scrollTo(0, 0);
+    }
+
+    function search() {
+        var value = document.getElementById("search_bar").value;
+        if (value === "" || value === "search") {
+            alert("Search again.");
+        } else if (value === "accessories" || value === "Accessories") {
+            window.location.href="accessories.html";
+        } else if (value === "course books" || value === "Course books") {
+            window.location.href="Course Bookks.html";
+        } else if (value === "Foodgrains" || value === "foodgrains") {
+            window.location.href="Foodgrains.html";
+        } else if (value === "Household" || value === "household") {
+            window.location.href="Household.html";
+        } else if (value === "Hygiene" || value === "hygiene") {
+            window.location.href="Hygiene.html";
+        } else if (value === "kids cloths" || value === "Kids cloths") {
+            window.location.href="kidscloths.html";
+        } else if (value === "laptop" || value === "Laptop") {
+            window.location.href="laptop.html";
+        } else if (value === "Mens cloths" || value === "mens cloths") {
+            window.location.href="menscloths.html";
+        } else if (value === "Novel" || value === "novel") {
+            window.location.href="Novel.html";
+        } else if (value === "phone" || value === "Phone" || value === "mobile" || value === "Mobile") {
+            window.location.href="phone.html";
+        } else if (value === "Story Book" || value === "story Book") {
+            window.location.href="Story Books.html";
+        } else if (value === "Women cloths" || value === "women cloths") {
+            window.location.href="womencloths.html";
+        } else {
+            alert("Product not found ? ")
+        }
+    }
+</script>
+
+</html>

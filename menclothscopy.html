@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Clothes</title>
+    <link rel="icon" href="fav1.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .full_container {
+            width: 100%;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-column-gap: 2.2%;
+            grid-row-gap: 2.2%;
+            padding: 4%;
+            padding-top: 0%;
+
+        }
+
+        .main {
+            width: 100%;
+            height: 80px;
+            /* border: 2px solid white; */
+            display: inline-flex;
+            background-color: rgb(21, 45, 141);
+            display: inline-flex;
+        }
+
+        .submain {
+            width: 100%;
+            padding: 2% 0%;
+            height: 2%;
+            color: rgb(152, 48, 48);
+        }
+
+        .submain h1 {
+            font-size: 3vw;
+        }
+
+        .div {
+            background-color: blanchedalmond;
+            border: 2px solid black;
+            padding: 5%;
+            height: 400px;
+            position: relative;
+        }
+
+        .div img {
+            width: 100%;
+            height: 300px;
+            margin: auto;
+        }
+
+        .div .info {
+            position: absolute;
+            width: 6%;
+            height: 4%;
+            top: 7%;
+            background-color: darkgrey;
+            right: 10%;
+            border-radius: 50%;
+            color: white;
+        }
+
+        .details {
+            position: absolute;
+            width: 1300%;
+            height: 1500%;
+            top: -16%;
+            background-color: whitesmoke;
+            right: -40%;
+            color: black;
+            display: none;
+            /* border: 2px solid black; */
+            padding: 45%;
+        }
+
+        .info:hover .details {
+            opacity: 0.7;
+            display: block;
+        }
+
+        .div p {
+            color: black;
+            font-size: 1.6vw;
+            text-decoration: capitalize;
+        }
+
+        .div button {
+            display: block;
+            width: 100%;
+            height: 30px;
+            font-size: 1.2vw;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .sign_in {
+            /* width: 20%; */
+            margin: auto;
+            margin-top: 25px;
+        }
+
+        .sign_in button {
+            padding: 5px 15px;
+            border-radius: 7%;
+            border: none;
+            cursor: pointer;
+            /* width: 50%; */
+            height: 35px;
+            font-size: 1.5vw;
+            margin: auto;
+        }
+
+        .logo {
+            width: 79%;
+            display: inline-flex;
+            padding: 0px 50px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 65px;
+            margin-left: 10px;
+            display: inline;
+            margin-top: 12px;
+        }
+
+        .logo_name {
+            mix-blend-mode: multiply;
+
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 45px;
+            background-color: rgb(21, 45, 141);
+        }
+
+        .footer-content p {
+            margin: 0;
+            color: rgb(102, 90, 90);
+        }
+
+        .footer-content p {
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="full_container">
+        <div class="nav">
+            <div class="main">
+                <div class="logo">
+                    <div class="logo_img">
+                        <img src="one.png" alt="logo">
+                    </div>
+                    <div class="logo_name">
+                        <img src="logo2.png" alt="logo">
+                    </div>
+                </div>
+                <div class="sign_in">
+                    <button><a href="login.php">Sign in</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="submain">
+            <h1>
+                <center>Men's Clothes</center>
+            </h1>
+        </div>
+        <div class="container">
+            <div class="div">
+                <img src="imagestoys/kh1.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <P>Rs.750/-</P>
+                        Manufacturer  : Ramvijay Fashions<br>
+                        ASIN  : B07RYTRBNP<br>
+                        Item model number :  SY-SS19-MFT-025<br>
+                        Country of Origin :  India<br>
+                        Department :  Men</div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>designer jacket for mens</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/kh2.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <P>Rs.850/-</P>
+                        Manufacturer  :  PARIS HAMILTON<br>
+                        ASIN  :  B0BFG2WT9W<br>
+                        Item part number : 719202332<br>
+                        Country of Origin  :  India<br>
+                        Department :  Men</div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>street fashion for mens</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/kh3.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <P>Rs.3500/-</P>
+                        Manufacturer  :  Greciilooks<br>
+                        ASIN :  B0BY8PNM6J<br>
+                        Item model number  :  GL-MS-6064<br>
+                        Country of Origin :  India<br>
+                        Department :  Men<br></div>
+                        
+                        
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>partywear kurta for mens</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/kh4.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <P>Rs.1590/-</P>
+                        Manufacturer :  Symbol<br>
+                        ASIN  :  B08QSK6RNG<br>
+                        Item model number : SYMETHSET-5<br>
+                        Country of Origin : India<br>
+                        Department :  Men<br>
+                        
+                        </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>casual wear for mens</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/kh5.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <P>Rs.1450/-</P>
+                        Manufacturer :  Greciilooks, Greciilooks<br>
+                        Packer :  Greciilooks<br>
+                        Importer  :  Greciilooks<br>
+                        <br>
+                        </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>blue jeans for mens </p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/kh6.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <P>Rs.4899/-</P>
+                        Manufacturer :  PARIS HAMILTON<br>
+                        ASIN  :  B0BCG6FRF7<br>
+                        Item part number :  71921032<br>
+                        Country of Origin  :  India<br>
+                        Department :  Men</div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>three piece suit for mens</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/kh7.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <P>Rs.550/-</P>
+                        Manufacturer  : Swastik Creation<br>
+                        ASIN : B07L4QRMG1<br>
+                        Item model number  :  C501<br>
+                        Country of Origin  : India<br>
+                        Department  : Men</div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>gray hoodies for mens</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/kh8.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <P>Rs.1350/-</P>
+                        Manufacturer  : Bira Biro<br>
+                        ASIN  : B0C1Z7RS8J<br>
+                        Item model number  : 1101<br>
+                        Country of Origin  : India<br>
+                        Department  :  Men</div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>formal dress for men</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/kh9.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <P>Rs.1199/-</P>
+                        Package Dimensions  :  33.7 x 29.2 x 7.3 cm; 330 Grams<br>
+                        Date First Available  : 6 July 2017<br>
+                        ASIN :  B073RHLB2B<br>
+                        Item model number  :  RGSDPDUPION<br>
+                        Country of Origin  :  India<br>
+                        Department  :  Mens</div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>check shirts for men</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/kh10.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <P>Rs.450/-</P>
+                        Product Dimensions :  76.2 x 117.5 x 0.5 cm; 250 Grams<br>
+                        Date First Available :  21 March 2023<br>
+                        Manufacturer : THOMAS SCOTT INDIA LTD.<br>
+                        ASIN :  B0BZ4MZC63<br>
+                        Item model number  :  HSCSM082<br>
+                        Country of Origin  :  India<br>
+                        Department : Men</div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>brown kurta &pajama</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/kh11.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <P>Rs.699/-</P>
+                        Product Dimensions :  25 x 20 x 4.5 cm; 500 Grams<br>
+                        Date First Available  :  9 March 2022<br>
+                        Manufacturer  :  Mensa Brands Technologies Pvt Ltd<br>
+                        ASIN  :  B09V5NT12X<br>
+                        Item model number :  B101<br>
+                        Department : Men</div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>kurta & salwar for men</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/kh12.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details">
+                        <P>Rs.1699/-</P>
+                        Product Dimensions  :  99.06 x 101.6 x 1.27 cm; 775 Grams<br>
+                        Date First Available  :  21 August 2021<br>
+                        Manufacturer : SKAVIJ<br>
+                        ASIN  :  B09D95FQ2P<br>
+                        Item model number  : KP7_brown_M<br>
+                        Country of Origin  :  India<br>
+                        Department : Men</div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>mens denim shirts </p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+        </div>
+        <div class="footer-content">
+            <p>&copy; 2023 Your Website. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>

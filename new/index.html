@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="range">Range:</label>
+        <input type="range" id="range" min="0" max="100" step="10">
+        <button onclick="filterDivs()">Filter</button>
+      </div>
+      
+      <div id="divContainer">
+        <div class="filterDiv">10</div>
+        <div class="filterDiv">40</div>
+        <div class="filterDiv">20</div>
+        <div class="filterDiv">80</div>
+        <div class="filterDiv">60</div>
+        <div class="filterDiv">30</div>
+      </div>
+      
+</body>
+<style>
+    .filterDiv {
+  width: 50px;
+  height: 50px;
+  background-color: lightblue;
+  margin: 5px;
+  text-align: center;
+  line-height: 50px;
+}
+
+#divContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+</style>
+<script>
+    function filterDivs() {
+  var range = document.getElementById("range").value;
+  var divs = document.getElementsByClassName("filterDiv");
+
+  // Convert HTMLCollection to Array for easier manipulation
+  var divsArray = Array.prototype.slice.call(divs);
+
+  divsArray.forEach(function(div) {
+    var value = parseInt(div.textContent);
+    if (value <= range) {
+      div.style.display = "block"; // Show the div
+    } else {
+      div.style.display = "none"; // Hide the div
+    }
+  });
+}
+
+</script>
+</html>

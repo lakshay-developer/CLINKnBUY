@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories</title>
+    <link rel="icon" href="fav1.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .full_container {
+            width: 100%;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-column-gap: 2.2%;
+            grid-row-gap: 2.2%;
+            padding: 4%;
+            padding-top: 0%;
+
+        }
+
+        .main {
+            width: 100%;
+            height: 80px;
+            /* border: 2px solid white; */
+            display: inline-flex;
+            background-color: rgb(21, 45, 141);
+            display: inline-flex;
+        }
+
+        .submain {
+            width: 100%;
+            padding: 2% 0%;
+            height: 2%;
+            color: rgb(152, 48, 48);
+        }
+
+        .submain h1 {
+            font-size: 3vw;
+        }
+
+        .div {
+            background-color: blanchedalmond;
+            border: 2px solid black;
+            padding: 5%;
+            height: 400px;
+            position: relative;
+        }
+
+        .div img {
+            width: 100%;
+            height: 300px;
+            margin: auto;
+        }
+
+        .div .info {
+            position: absolute;
+            width: 6%;
+            height: 4%;
+            top: 7%;
+            background-color: darkgrey;
+            right: 10%;
+            border-radius: 50%;
+            color: white;
+        }
+
+        .details {
+            position: absolute;
+            width: 1300%;
+            height: 1500%;
+            top: -16%;
+            background-color: whitesmoke;
+            right: -40%;
+            color: black;
+            display: none;
+            /* border: 2px solid black; */
+            padding: 45%;
+        }
+
+        .info:hover .details {
+            opacity: 0.7;
+            display: block;
+        }
+
+        .div p {
+            color: black;
+            font-size: 1.6vw;
+            text-decoration: capitalize;
+        }
+
+        .div button {
+            display: block;
+            width: 100%;
+            height: 30px;
+            font-size: 1.2vw;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .sign_in {
+            /* width: 20%; */
+            margin: auto;
+            margin-top: 25px;
+        }
+
+        .sign_in button {
+            padding: 5px 15px;
+            border-radius: 7%;
+            border: none;
+            cursor: pointer;
+            /* width: 50%; */
+            height: 35px;
+            font-size: 1.5vw;
+            margin: auto;
+        }
+
+        .logo {
+            width: 79%;
+            display: inline-flex;
+            padding: 0px 50px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 65px;
+            margin-left: 10px;
+            display: inline;
+            margin-top: 12px;
+        }
+
+        .logo_name {
+            mix-blend-mode: multiply;
+
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 45px;
+            background-color: rgb(21, 45, 141);
+        }
+
+        .footer-content p {
+            margin: 0;
+            color: rgb(102, 90, 90);
+        }
+
+        .footer-content p {
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="full_container">
+        <div class="nav">
+            <div class="main">
+                <div class="logo">
+                    <div class="logo_img">
+                        <img src="one.png" alt="logo">
+                    </div>
+                    <div class="logo_name">
+                        <img src="logo2.png" alt="logo">
+                    </div>
+                </div>
+                <div class="sign_in">
+                    <button><a href="login.php">Sign in</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="submain">
+            <h1>
+                <center>Accessories</center>
+            </h1>
+        </div>
+        <div class="container">
+            <div class="div">
+                <img src="imagestoys/jai12.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details"><p>Rs-2000/-</p>Bluetooth 5.0 <br>
+                        crazy base &sound <br>
+                        Water Resistant <br>
+                        Scratch Resistant <br>
+
+        
+                        
+                        
+                        10 days Battery</div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Noise earbuds</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/jai11.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details"><p>Rs-2250/-</p>BoAt ProGear B20 earphones <br>wired earphone <br> </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Boat earphones</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/jai10.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details"><p>Rs-2000/-</p>fire-Boltt Touch Large Display  Smart Watch <br> with in-Built Games,<br> 8 Days Battery Life,<br> IP67 Water Resistant <br> with Blood Oxygen and Heart Rate Monitoring (Grey)</div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Firevolt earbuds</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/jai9.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details"><p>Rs-3500/-</p>boAt Nirvana 751 ANC Hybrid Noise Cancelling Bluetooth Wireless <br> Over Ear Headphones with Up to 65H Playtime,<br> ASAP Charge,<br> Ambient Sound Mode,<br> Immersive Sound,<br> Carry Pouch(Gunmetal Grey)</div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Boat Headphone</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/jai8.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details"><p>1750/-</p>Dual Equaliser Modes for Normal <br>
+                        Wireless Bluetooth Streaming ; Frequency Range: 20Hz~20kHz ;<br> Talk time (Hours): Up to 13hrs Bluetooth: 5.0V ; <br> Charging Type: 5V 1A wire charging ; <br> Battery Capacity: 200mAh
+                        20 hours Music Playtime <br>
+                        Quick Charging: 10 min of Charge gives you 2 Hrs playtime <br>
+                        Lightweight and Flat Foldable Design, Bixby - No <br>
+                        </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Noise earphones</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/jai7.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details"><p>Rs-3400/-</p>Brand: boAt <br>
+                        Generic Name: Bluetooth Headset <br>
+                        Product: New <br>
+                        Model: 440 <br>
+                        Colour: White <br>
+                        Playback Time: 8 Hour <br>
+                        Connectivity: Bluetooth 5.0 <br>
+                        Warranty: 1 Year From boAt <br>
+                        Volumetric Weight: 0.30 kg</div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Boat wired earphone</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/jai6.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details"><p>Rs-4400/-</p>Brand: JBL <br>
+                        Product: New <br>
+                        Generic Name:  earphone <br>
+                        Model no.: LIVE 200BT <br>
+                        Warranty: 1 Year From JBL <br>
+                        Volumetric Weight: 0.50 kg</div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>JBL earphone</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/jai5.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details"><p>Rs-4200/-</p>Brand: boAt <br>
+                        Product: New <br>
+                        Generic : Bluetooth conectivity<br>
+                        Model no.: Rockerz 255 <br>
+                        Warranty: 1 Year From Boat <br>
+                        Volumetric Weight: 0.20 kg</div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Boat headphone</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/jai4.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details"><P>Rs.2400/-</P>Brand: boAt Rockerz<br>
+                        Product: New <br>
+                        Generic : Bluetooth <br>
+                        Model no.: 255 <br>
+                        Warranty: 1 Year From boAt <br>
+                        </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Rockerz watch</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/jai3.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details"><p>Rs-2000/-</p>Brand: boAt <br>
+                        Product: New <br>
+                        Generic : Bluetooth <br>
+                        Model no.: Rockerz 255 <br>
+                        Warranty: 1 Year From Boat <br>
+                        </div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>Boat 255pro smartwatch</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/jai2.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details"><P> Rs-2500/-</P>Brand: boat  <br>
+                        
+                        Product: New <br>
+                        
+                        Warranty: 2-year limited warranty <br>
+                        
+                        Volumetric Weight: 0.15 kg</div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>boat smartwatch</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+            <div class="div">
+                <img src="imagestoys/jai1.jpeg" alt="only">
+                <div class="info">
+                    <center>i</center>
+                    <div class="details"><p>Rs.800/-</p>Brand: skybags <br>
+                        Product: New <br>
+                        
+                        Model no.: V232W <br>
+                        Warranty: 2 Years <br>
+                        Volumetric Weight: 0.15 kg</div>
+                </div>
+                <br>
+                <br>
+                <center>
+                    <p>waterproof bag</p>
+                </center>
+                <br>
+                <button type="button"><strong><a href="login.php">Buy Now</a></strong></button>
+            </div>
+        </div>
+        <div class="footer-content">
+            <p>&copy; 2023 Your Website. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>
